@@ -1,5 +1,4 @@
 import React, { useState } from 'react';
-import './Login.css';
 
 function Login({ onLoginSuccess }) {
   const [username, setUsername] = useState('');
@@ -11,7 +10,6 @@ function Login({ onLoginSuccess }) {
     e.preventDefault();
     setError('');
 
-    // Validaciones básicas
     if (!username || !password) {
       setError('Por favor, completa todos los campos.');
       return;
@@ -40,36 +38,36 @@ function Login({ onLoginSuccess }) {
   };
 
   return (
-    <div className="login-container">
-      <div className="login-card">
-        <h2 className="login-title">Sistema de Reservaciones</h2>
-        <p className="login-subtitle">Ingresa tus credenciales para acceder</p>
+    <div style={{ display: 'flex', justifyContent: 'center', alignItems: 'center', height: '100vh', backgroundColor: '#f8fafc' }}>
+      <div style={{ backgroundColor: '#ffffff', padding: '40px', borderRadius: '12px', boxShadow: '0 4px 12px rgba(0,0,0,0.05)', width: '100%', maxWidth: '440px', textAlign: 'center' }}>
+        <h2 style={{ fontSize: '24px', fontWeight: 'bold', color: '#0f172a', marginBottom: '8px' }}>Sistema de Reservaciones</h2>
+        <p style={{ color: '#64748b', fontSize: '14px', marginBottom: '24px' }}>Ingresa tus credenciales para acceder</p>
         
-        {error && <div className="login-error-msg">{error}</div>}
+        {error && <div style={{ color: '#ef4444', backgroundColor: '#fef2f2', padding: '10px', borderRadius: '6px', marginBottom: '16px', fontSize: '14px' }}>{error}</div>}
 
-        <form onSubmit={handleSubmit} className="login-form">
-          <label className="login-label">Usuario o Correo</label>
+        <form onSubmit={handleSubmit} style={{ textAlign: 'left' }}>
+          <label style={{ display: 'block', marginBottom: '6px', fontWeight: '500', color: '#334155', fontSize: '14px' }}>Usuario o Correo</label>
           <input 
             type="text" 
             value={username} 
             onChange={(e) => setUsername(e.target.value)}
             placeholder="Ej: emilys"
-            className="login-input"
+            style={{ width: '100%', padding: '10px 12px', borderRadius: '6px', border: '1px solid #cbd5e1', marginBottom: '16px', boxSizing: 'border-box' }}
           />
 
-          <label className="login-label">Contraseña</label>
+          <label style={{ display: 'block', marginBottom: '6px', fontWeight: '500', color: '#334155', fontSize: '14px' }}>Contraseña</label>
           <input 
             type="password" 
             value={password} 
             onChange={(e) => setPassword(e.target.value)}
             placeholder="•••••"
-            className="login-input login-input-password"
+            style={{ width: '100%', padding: '10px 12px', borderRadius: '6px', border: '1px solid #cbd5e1', marginBottom: '24px', boxSizing: 'border-box' }}
           />
 
           <button 
             type="submit" 
             disabled={loading}
-            className="login-button"
+            style={{ width: '100%', padding: '12px', backgroundColor: '#2563eb', color: '#ffffff', border: 'none', borderRadius: '6px', fontWeight: '600', cursor: 'pointer', transition: 'background-color 0.2s' }}
           >
             {loading ? 'Cargando...' : 'Entrar'}
           </button>
