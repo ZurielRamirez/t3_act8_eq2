@@ -1,16 +1,47 @@
-# React + Vite
+# 🏨 Sistema de Gestión Hotelera - Hotel Manager
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Este es un sistema web desarrollado en **React** diseñado para optimizar y controlar de manera eficiente las operaciones internas de un complejo hotelero. El proyecto implementa una arquitectura moderna de componentes, manejando un flujo dinámico de navegación y un control preciso de inventarios mediante la integración de APIs REST.
 
-Currently, two official plugins are available:
+---
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+##  Integrantes del Equipo
+* **Bautista Ramírez Amisadai Zuriel**
+* **Santiago Vásquez David Osmar**
 
-## React Compiler
+---
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+##  Características Principales
 
-## Expanding the ESLint configuration
+* **Control de Acceso (Login):** Módulo de autenticación seguro para el ingreso de administradores y personal autorizado al panel de control.
+* **Navegación Dinámica:** Panel lateral (*Sidebar*) integrado que permite conmutar fluidamente entre las distintas vistas del sistema (Inicio, Dashboard, Habitaciones, Reservaciones y Configuración).
+* **Módulo de Inventario General (Stock):** Un CRUD completo e interactivo en la sección de *Dashboard* para gestionar el suministro del hotel (utilería, blancos, herramientas de mantenimiento, insumos y alimentos).
+* **Persistencia en URL:** Los filtros de búsqueda, paginación y límites de registros se sincronizan automáticamente con los parámetros de la URL (`URLSearchParams`) para mantener el estado de la vista al recargar.
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+---
+
+##  Tecnologías Utilizadas
+
+* **Frontend:** React (JSX), JavaScript (ES6+), CSS3 para layouts personalizados.
+* **Consumo de Servicios:** Peticiones HTTP asíncronas (`Fetch API`) utilizando métodos `GET`, `POST`, `PUT` y `DELETE` para interactuar con endpoints de simulación de datos globales.
+* **Control de Versiones:** Git y GitHub para el despliegue colaborativo.
+
+---
+
+##  Estructura del Módulo de Stock (CRUD)
+
+El inventario de suministros está homologado con los siguientes campos operativos:
+1. **ID Artículo:** Identificador único del insumo o herramienta.
+2. **Descripción / Nombre:** Nombre detallado del objeto en almacén.
+3. **Categoría de Stock:** Clasificación interna en el hotel (*Utilería/Blancos, Herramientas/Mantenimiento, Insumos/Alimentos*).
+4. **Costo Unitario:** Valor financiero del producto reflejado en moneda nacional ($ MXN).
+
+---
+
+##  Instrucciones de Ejecución Local
+
+Para levantar el entorno de desarrollo localmente, ejecuta los siguientes comandos en tu terminal dentro de la carpeta del proyecto:
+
+1. **Instalar dependencias necesarias:**
+   ```bash
+   npm install
+   npm run dev
