@@ -15,7 +15,6 @@ El sistema se encuentra completamente operativo y accesible al público en la in
 
  **http://192.241.240.143/t3_act8_eq2/?page=1&limit=10**
 
-*(Nota: Asegúrate de reemplazar `IP_DE_SU_VPS` con la dirección IP pública real de tu máquina virtual).*
 
 ---
 
