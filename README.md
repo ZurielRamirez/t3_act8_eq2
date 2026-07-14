@@ -60,3 +60,16 @@ Para levantar el entorno de desarrollo localmente, ejecuta los siguientes comand
 1. **Instalar dependencias necesarias:**
    ```bash
    npm install
+
+---
+## APIs Utilizadas en el Sistema
+
+Para el correcto funcionamiento del sistema, se integraron dos servicios REST externos:
+
+1. **Módulo de Autenticación (Login):**
+   * **API Utilizada:** `https://dummyjson.com/auth/login`
+   * **Descripción:** Se utiliza este servicio para validar las credenciales de los usuarios en el entorno de desarrollo/simulación. Retorna un token Bearer (JWT) junto con la información del perfil del usuario (nombre, apellido, imagen de avatar, etc.) si la autenticación es exitosa.
+
+2. **Módulo de Inventario y Control de Suministros:**
+   * **API Utilizada:** `https://api.jsonbin.io/v3/b/666db61ee41b4d34e402e1c9`
+   * **Descripción:** Seleccionada debido a su estabilidad para simular una base de datos persistente en la nube, permitiendo realizar peticiones HTTP asíncronas (`Fetch API`) mediante operaciones `GET`, `POST`, `PUT` y `DELETE` para actualizar en tiempo real el stock hotelero.
