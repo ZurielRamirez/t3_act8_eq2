@@ -22,7 +22,7 @@ El sistema se encuentra completamente operativo y accesible al público en la in
 ## API Elegida para la Tabla de Datos
 Para alimentar la tabla interactiva de inventario y control de suministros de manera global, el sistema consume la siguiente API REST:
 
-* **API Utilizada:** `https://api.jsonbin.io/v3/b/666db61ee41b4d34e402e1c9` *(o la URL exacta de MockAPI/JSONBin/JSONPlaceholder que definieron en su código)*
+* **API Utilizada:** `https://api.jsonbin.io/v3/b/666db61ee41b4d34e402e1c9` *(o la URL exacta de MockAPI/JSONBin/JSONPlaceholder)*
 * **Descripción:** Se seleccionó esta API debido a su estabilidad para simular una base de datos persistente en la nube, permitiendo realizar peticiones HTTP asíncronas (`Fetch API`) mediante operaciones `GET`, `POST`, `PUT` y `DELETE` para actualizar en tiempo real el stock hotelero (utilería, blancos, mantenimiento e insumos).
 
 ---
