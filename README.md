@@ -68,7 +68,7 @@ Para el correcto funcionamiento del sistema, se integraron dos servicios REST ex
 
 1. **Módulo de Autenticación (Login):**
    * **API Utilizada:** `https://dummyjson.com/auth/login`
-   * **Descripción:** Se utiliza este servicio para validar las credenciales de los usuarios en el entorno de desarrollo/simulación. Retorna un token Bearer (JWT) junto con la información del perfil del usuario (nombre, apellido, imagen de avatar, etc.) si la autenticación es exitosa.
+   * **Descripción:** Se utiliza este servicio para validar las credenciales de los usuarios en el entorno de desarrollo/simulación. Retorna un token Bearer (JWT) junto con la información del perfil del usuario (nombre, apellido, imagen de avatar, etc.) si la autenticación es exitosa. Para ver los usuarios y asi poder entrar accede al siguiente link https://dummyjson.com/users.
 
 2. **Módulo de Inventario y Control de Suministros:**
    * **API Utilizada:** `https://api.jsonbin.io/v3/b/666db61ee41b4d34e402e1c9`
