@@ -7,7 +7,9 @@
     "dev": "vite",
     "build": "vite build",
     "lint": "eslint .",
-    "preview": "vite preview"
+    "preview": "vite preview",
+    "deploy": "ssh root@192.241.240.143 \"cd /var/www/html/t3_act8_eq2 && git pull && npm run build\""
+}
   },
   "dependencies": {
     "react": "^19.2.7",
